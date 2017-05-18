@@ -1,0 +1,3 @@
+manager_member_homepage:
+    path:     /
+    defaults: { _controller: ManagerMemberBundle:Default:index }
