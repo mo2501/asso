@@ -2,7 +2,7 @@ FR
 ==
 Application Symfony pour la gestion d'associations :
 - Listes de membres
--Calendrier et événements
+- Calendrier et événements
 - Comptabilité et payements
 - Comptes-rendus et documents de travail
 
