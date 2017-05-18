@@ -1,3 +1,6 @@
+Managing associations
+========================
+
 FR
 ==
 Application Symfony pour la gestion d'associations :
@@ -6,11 +9,8 @@ Application Symfony pour la gestion d'associations :
 - Comptabilité et payements
 - Comptes-rendus et documents de travail
 
-
 EN
 ==
-Managing associations
-========================
 This is a Symfony application to manage associations :
 - Member lists
 - Calendar and events
