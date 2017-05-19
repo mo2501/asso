@@ -1,3 +1,11 @@
 manager_app_homepage:
-    path:     /
-    defaults: { _controller: ManagerAppBundle:Default:index }
+    path:     /manager
+    defaults: { _controller: ManagerAppBundle:App:index }
+
+app_calendar:
+    path:     /manager/calendar
+    defaults: { _controller: ManagerAppBundle:App:index }
+
+app_contacts:
+    path:     /manager/calendar
+    defaults: { _controller: ManagerAppBundle:App:index }

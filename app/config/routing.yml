@@ -9,7 +9,3 @@ manager_member:
 manager_app:
     resource: "@ManagerAppBundle/Resources/config/routing.yml"
     prefix:   /
-
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
