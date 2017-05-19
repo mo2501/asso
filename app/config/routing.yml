@@ -1,0 +1,15 @@
+manager_user:
+    resource: "@ManagerUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+manager_member:
+    resource: "@ManagerMemberBundle/Resources/config/routing.yml"
+    prefix:   /
+
+manager_app:
+    resource: "@ManagerAppBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
