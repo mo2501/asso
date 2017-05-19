@@ -8,6 +8,6 @@ class AppController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('ManagerAppBundle:app:base.html.twig');
+        return $this->render('ManagerAppBundle:app:layout.html.twig');
     }
 }
