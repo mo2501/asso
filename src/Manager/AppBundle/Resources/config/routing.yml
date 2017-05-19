@@ -1,11 +1,19 @@
 manager_app_homepage:
-    path:     /manager
+    path:     /
     defaults: { _controller: ManagerAppBundle:App:index }
 
+manager_member:
+    resource: "@ManagerMemberBundle/Resources/config/routing.yml"
+    prefix:   /member
+
 app_calendar:
-    path:     /manager/calendar
+    path:     /calendar
     defaults: { _controller: ManagerAppBundle:App:index }
 
 app_contacts:
-    path:     /manager/calendar
+    path:     /contact
     defaults: { _controller: ManagerAppBundle:App:index }
+
+app_profile:
+    path:     /
+    defaults: { _controller: ManagerMemberBundle:Default:index }
