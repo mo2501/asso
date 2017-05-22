@@ -1,0 +1,3 @@
+manager_secretaria_homepage:
+    path:     /
+    defaults: { _controller: ManagerSecretariaBundle:Default:index }

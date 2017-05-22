@@ -6,6 +6,15 @@ manager_member:
     resource: "@ManagerMemberBundle/Resources/config/routing.yml"
     prefix:   /member
 
+manager_secretaria:
+    resource: "@ManagerSecretariaBundle/Resources/config/routing.yml"
+    prefix:   /secretaria
+
+
+
+
+
+
 app_calendar:
     path:     /calendar
     defaults: { _controller: ManagerAppBundle:App:index }

@@ -1,0 +1,4 @@
+services:
+#    learning_app.example:
+#        class: Learning\AppBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
