@@ -12,8 +12,6 @@ use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Class User
- * @package Security\UserBundle
  * @ORM\Entity
  * @ORM\Table(name="asso_user")
  */
@@ -25,4 +23,9 @@ class User extends BaseUser
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
+
+    public function __construct()
+    {
+        parent::__construct();
+    }
 }

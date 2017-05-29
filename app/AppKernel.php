@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new Security\UserBundle\SecurityUserBundle(),
             new Manager\SecretariaBundle\ManagerSecretariaBundle(),
             new Learning\AppBundle\LearningAppBundle(),
+            new \FOS\UserBundle\FOSUserBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
