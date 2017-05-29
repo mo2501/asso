@@ -1,6 +1,12 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: BRPX0413
+ * Date: 22/05/2017
+ * Time: 10:27
+ */
 
-namespace Security\UserBundle\Entity;
+namespace Security\UserBundle;
 
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
@@ -23,4 +29,3 @@ class User extends BaseUser
         parent::__construct();
     }
 }
-
