@@ -7,20 +7,27 @@
 
                 <!-- page content -->
                 <div class="right_col" role="main" style="margin-left: 0;">
-                    <div class="">
 
                         <div class="clearfix"></div>
 
-                        <a href="{{ path('manager_app_homepage') }}">Manager</a><br>
+                        <a href="{{ path('manager_app_homepage') }}"><i class="fa fa-cogs" aria-hidden="true"></i> Manager</a>
 
-                        <a href="{{ path('learning_app_homepage') }}">Learning</a>
+                        <a href="{{ path('learning_app_homepage') }}"><i class="fa fa-university" aria-hidden="true"></i> Learning</a>
+
+                        <a href="{{ path('learning_app_homepage') }}"><i class="fa fa-connectdevelop" aria-hidden="true"></i> Partnerships</a>
+
+                        <a href="{{ path('learning_app_homepage') }}"><i class="fa fa-cloud" aria-hidden="true"></i> Ressources</a>
 
                         {% block page_content %}{% endblock %}
 
-                    </div>
                 </div>
                 <!-- /page content -->
 
+            </div>
+
+            <div class="portal-footer">
+                <h2>Portail Associatif</h2>
+                <p>©2017 All Rights Reserved. asso-france.com</p>
             </div>
         </div>
     </body>

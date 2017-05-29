@@ -472,6 +472,7 @@ body .container.body .right_col {
 }
 .container {
     width: 100%;
+    height: 95%;
     padding: 0
 }
 .navbar-nav>li>a,
@@ -494,6 +495,22 @@ body {
     font-weight: 400;
     line-height: 1.471
 }
+
+.main_container  {
+    height: 97%;
+}
+
+.main_container a {
+    margin: 4rem;
+    font-size: 2rem;
+    float: left;
+}
+
+.portal-footer {
+    text-align: center;
+    height: 3%;
+}
+
 .main_container .top_nav {
     display: block;
     margin-left: 230px

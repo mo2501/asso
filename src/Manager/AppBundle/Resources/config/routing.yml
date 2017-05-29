@@ -13,8 +13,6 @@ manager_secretaria:
 
 
 
-
-
 app_calendar:
     path:     /calendar
     defaults: { _controller: ManagerAppBundle:App:index }
