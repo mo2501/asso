@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Asso</title>
+    <title>Manager</title>
 
 {% block stylesheets %}
     <!-- Bootstrap -->
@@ -17,7 +17,7 @@
 
     <!-- Custom Theme Style -->
     <link href="{{ asset('assets/css/custom.min.css') }}" rel="stylesheet">
-
+    <link rel="stylesheet" href="{{ asset('bundles/adesignscalendar/css/fullcalendar/fullcalendar.css') }}" />
 </head>
 
 <body class="nav-md">
@@ -34,24 +34,14 @@
                 {% block top_content_header %}
                 <div class="page-title">
                     <div class="title_left">
-                   {% block page_title %}{% endblock page_title %}
+                        {% block page_title %}{% endblock page_title %}
                     </div>
 
-                    <div class="title_right">
-                        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search for...">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Go!</button>
-                    </span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 {% endblock top_content_header %}
+                {% block calendar %}{% endblock %}
 
                 <div class="clearfix"></div>
-
 
                 {% block page_content %}{% endblock %}
 
@@ -59,7 +49,6 @@
             </div>
         </div>
         <!-- /page content -->
-
 
         {% include 'ManagerAppBundle:app:footer.html.twig' %}
 
@@ -76,13 +65,19 @@
     <script src="{{ asset('assets/vendors/fastclick/lib/fastclick.js') }}"></script>
     <!-- NProgress -->
     <script src="{{ asset('assets/vendors/nprogress/nprogress.js') }}"></script>
+
+
 {% endblock javascripts %}
 
 {% block modals %}{% endblock modals %}
 
 <!-- Custom Theme Scripts -->
 <script src="{{ asset('assets/js/custom.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+<script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
 
+<script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/fullcalendar/jquery.fullcalendar.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/calendar-settings.js') }}"></script>
 
 </body>
 </html>

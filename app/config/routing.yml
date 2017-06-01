@@ -17,6 +17,12 @@ login_check_manager:
 logout_manager:
     path: /logout_manager
 
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+adesigns_calendar:
+  resource: "@ADesignsCalendarBundle/Resources/config/routing.xml"
+
 learning_app:
     resource: "@LearningAppBundle/Resources/config/routing.yml"
     prefix:   /learning

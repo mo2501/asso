@@ -1,0 +1,3 @@
+manager_calendar_homepage:
+    path:     /
+    defaults: { _controller: ManagerCalendarBundle:Default:index }

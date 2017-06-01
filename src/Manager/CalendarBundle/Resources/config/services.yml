@@ -1,0 +1,4 @@
+services:
+#    manager_calendar.example:
+#        class: Manager\CalendarBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

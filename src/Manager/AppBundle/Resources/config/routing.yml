@@ -10,12 +10,9 @@ manager_secretaria:
     resource: "@ManagerSecretariaBundle/Resources/config/routing.yml"
     prefix:   /secretaria
 
-
-
-
-app_calendar:
-    path:     /calendar
-    defaults: { _controller: ManagerAppBundle:App:index }
+manager_calendar:
+    resource: "@ManagerCalendarBundle/Resources/config/routing.yml"
+    prefix:   /calendar
 
 app_contacts:
     path:     /contact
@@ -23,4 +20,4 @@ app_contacts:
 
 app_profile:
     path:     /
-    defaults: { _controller: ManagerMemberBundle:Default:index }
+    defaults: { _controller: ManagerAppBundle:Default:index }
