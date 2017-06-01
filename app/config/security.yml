@@ -1,31 +1,33 @@
-# app/config/security.yml
 security:
-    encoders:
-        FOS\UserBundle\Model\UserInterface: bcrypt
+  encoders:
+    Symfony\Component\Security\Core\User\User: plaintext
 
-    role_hierarchy:
-        ROLE_ADMIN:       ROLE_USER
-        ROLE_SUPER_ADMIN: ROLE_ADMIN
+  role_hierarchy:
+    ROLE_ADMIN:       ROLE_USER
+    ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
 
-    providers:
-        fos_userbundle:
-            id: fos_user.user_provider.username
+  providers:
+    in_memory:
+      memory:
+        users:
+          user:  { password: userpass, roles: [ 'ROLE_USER' ] }
+          admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
 
-    firewalls:
-        main:
-            pattern: ^/
-            form_login:
-                provider: fos_userbundle
-                csrf_token_generator: security.csrf.token_manager
-                # if you are using Symfony < 2.8, use the following config instead:
-                # csrf_provider: form.csrf_provider
+  firewalls:
+    dev:
+      pattern: ^/(_(profiler|wdt)|css|images|js)/
+      security: false
+    manager:
+        pattern:   ^/
+        anonymous: true
+        provider: in_memory
+        form_login:
+            login_path: login_manager
+            check_path: login_check_manager
+        logout:
+            path: logout_manager
+            target: login_manager
 
-            logout:       true
-            anonymous:    true
-
-    access_control:
-        - { path: ^/manager, roles: ROLE_ADMIN }
-        - { path: ^/login$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/resetting, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+  access_control:
+      - { path: ^/manager, roles: ROLE_ADMIN }
+      - { path: ^/manager, roles: ROLE_USER }

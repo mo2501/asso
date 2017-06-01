@@ -72,7 +72,7 @@ swiftmailer:
 fos_user:
     db_driver: orm
     firewall_name: main
-    user_class: SecurityUserBundle\Entity\User
+    user_class: Security\UserBundle\Entity\User
     from_email:
         address: noreply@asso.com
         sender_name: contact

@@ -1,0 +1,3 @@
+portal_app_homepage:
+    path:     /
+    defaults: { _controller: PortalAppBundle:Default:index }

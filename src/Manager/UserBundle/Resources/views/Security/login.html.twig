@@ -1,0 +1,25 @@
+{% extends "PortalAppBundle::layout.html.twig" %}
+
+{% block body %}
+    <div class="container body">
+    <div class="main_container">
+        <div class="right_col" role="main" style="margin-left: 0; padding: 4rem; text-align: center">
+    {# S'il y a une erreur, on l'affiche dans un joli cadre #}
+    {% if error %}
+        <div class="alert alert-danger">{{ error.message }}</div>
+    {% endif %}
+
+    {# Le formulaire, avec URL de soumission vers la route « login_check » comme on l'a vu #}
+    <form action="{{ path('login_check_manager') }}" method="post" style="text-align: right; width: 60%">
+        <label for="username">Login :</label>
+        <input type="text" id="username" name="_username" value="{{ last_username }}" /><br><br>
+
+        <label for="password">Passe :</label>
+        <input type="password" id="password" name="_password" />
+        <br /><br>
+        <input type="submit" value="Connexion" />
+    </form>
+</div>
+    </div>
+    </div>
+{% endblock %}

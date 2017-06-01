@@ -1,13 +1,21 @@
-security_user:
-    resource: "@SecurityUserBundle/Resources/config/routing.yml"
+portal_app:
+    resource: "@PortalAppBundle/Resources/config/routing.yml"
     prefix:   /
-
-fos_user:
-    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
 manager_app:
     resource: "@ManagerAppBundle/Resources/config/routing.yml"
     prefix:   /manager
+
+login_manager:
+    path: /login_manager
+    defaults:
+        _controller: ManagerUserBundle:Security:login
+
+login_check_manager:
+    path: /login_check_manager
+
+logout_manager:
+    path: /logout_manager
 
 learning_app:
     resource: "@LearningAppBundle/Resources/config/routing.yml"

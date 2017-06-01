@@ -17,10 +17,11 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Manager\AppBundle\ManagerAppBundle(),
             new Manager\MemberBundle\ManagerMemberBundle(),
-            new Security\UserBundle\SecurityUserBundle(),
             new Manager\SecretariaBundle\ManagerSecretariaBundle(),
             new Learning\AppBundle\LearningAppBundle(),
-            new \FOS\UserBundle\FOSUserBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+            new Manager\UserBundle\ManagerUserBundle(),
+            new Portal\AppBundle\PortalAppBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
