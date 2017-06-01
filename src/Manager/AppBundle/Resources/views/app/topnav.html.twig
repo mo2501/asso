@@ -26,7 +26,7 @@
                 
                 <li role="presentation" class="dropdown">
                     <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-                        <i class="fa fa-envelope"></i>
+                        <i class="fa fa-bell-o"></i>
                         <span class="badge bg-green">8</span>
                     </a>
                     <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
@@ -34,7 +34,7 @@
                             <a>
                                 <span class="image"><img src="{{ asset('assets/images/img.jpg') }}" alt="Profile Image" /></span>
                         <span>
-                          <span>John Smith</span>
+                          <span>{{ app.user.username }}</span>
                           <span class="time">3 mins ago</span>
                         </span>
                         <span class="message">
@@ -46,7 +46,7 @@
                             <a>
                                 <span class="image"><img src="{{ asset('assets/images/img.jpg') }}" alt="Profile Image" /></span>
                         <span>
-                          <span>John Smith</span>
+                          <span>{{ app.user.username }}</span>
                           <span class="time">3 mins ago</span>
                         </span>
                         <span class="message">
@@ -58,7 +58,7 @@
                             <a>
                                 <span class="image"><img src="{{ asset('assets/images/img.jpg') }}" alt="Profile Image" /></span>
                         <span>
-                          <span>John Smith</span>
+                          <span>{{ app.user.username }}</span>
                           <span class="time">3 mins ago</span>
                         </span>
                         <span class="message">
@@ -70,7 +70,7 @@
                             <a>
                                 <span class="image"><img src="{{ asset('assets/images/img.jpg') }}" alt="Profile Image" /></span>
                         <span>
-                          <span>John Smith</span>
+                          <span>{{ app.user.username }}</span>
                           <span class="time">3 mins ago</span>
                         </span>
                         <span class="message">
