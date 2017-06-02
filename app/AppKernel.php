@@ -25,6 +25,9 @@ class AppKernel extends Kernel
             new Portal\AppBundle\PortalAppBundle(),
             new ADesigns\CalendarBundle\ADesignsCalendarBundle(),
             new Manager\CalendarBundle\ManagerCalendarBundle(),
+            new Cloud\FileManagerBundle\CloudFileManagerBundle(),
+            new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+            new FM\ElfinderBundle\FMElfinderBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

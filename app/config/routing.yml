@@ -1,3 +1,4 @@
+# app bundles
 portal_app:
     resource: "@PortalAppBundle/Resources/config/routing.yml"
     prefix:   /
@@ -17,12 +18,21 @@ login_check_manager:
 logout_manager:
     path: /logout_manager
 
+learning_app:
+    resource: "@LearningAppBundle/Resources/config/routing.yml"
+    prefix:   /learning
+
+cloud_file_manager:
+    path: /cloud
+    defaults:
+        _controller: CloudFileManagerBundle:Default:index
+
+# imported bundles
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
 
 adesigns_calendar:
   resource: "@ADesignsCalendarBundle/Resources/config/routing.xml"
 
-learning_app:
-    resource: "@LearningAppBundle/Resources/config/routing.yml"
-    prefix:   /learning
+elfinder:
+     resource: "@FMElfinderBundle/Resources/config/routing.yml"
