@@ -8,6 +8,17 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('ManagerMemberBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $memberRepository = $em->getRepository('ManagerMemberBundle:Member');
+
+        $memberList = $memberRepository->findAll();
+
+        return $this->render(
+            'ManagerMemberBundle:Default:index.html.twig',
+            array(
+                'memberList' => $memberList
+            )
+        );
     }
 }

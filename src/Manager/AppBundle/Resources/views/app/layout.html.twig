@@ -13,6 +13,7 @@
     <link href="{{ asset('assets/vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="{{ asset('assets/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/manager_member_bundle/memberlist.css') }}" rel="stylesheet">
 {% endblock stylesheets %}
 
     <!-- Custom Theme Style -->
@@ -40,7 +41,7 @@
                 </div>
                 {% endblock top_content_header %}
                 {% block calendar %}{% endblock %}
-
+                {% block member %}{% endblock %}
                 <div class="clearfix"></div>
 
                 {% block page_content %}{% endblock %}
@@ -59,6 +60,8 @@
 {% block javascripts %}
     <!-- jQuery -->
     <script src="{{ asset('assets/vendors/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ asset('//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js') }}"></script>
     <!-- Bootstrap -->
     <script src="{{ asset('assets/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <!-- FastClick -->
@@ -75,6 +78,9 @@
 <script src="{{ asset('assets/js/custom.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
 <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+
+
+<script src="{{ asset('assets/js/manager_member_bundle/memberlist.js') }}"></script>
 
 <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/fullcalendar/jquery.fullcalendar.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/calendar-settings.js') }}"></script>

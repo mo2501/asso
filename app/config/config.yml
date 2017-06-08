@@ -97,12 +97,11 @@ fm_elfinder:
                         #show_hidden: true|false # defaults to false, hides dotfiles
                         driver: LocalFileSystem
                         path: drive
-                        upload_allow: ['image/png', 'image/jpg', 'image/jpeg', 'txt']
-                        upload_deny: ['all']
+                        upload_allow: ['all']
+                        # upload_deny: ['all']
                         upload_max_size: 2M # also file upload sizes restricted in php.ini
-                        #attributes: example of setting attributes permission
-                        #    - { pattern: '/(.*?)/', read: true, write: false, locked: true }
-
+                        attributes:
+                            - { pattern: '/.doc/', read: true, write: true, locked: false, hidden: false }
 ivory_ck_editor:
     default_config: default
     configs:
