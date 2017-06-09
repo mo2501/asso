@@ -63,6 +63,6 @@ $BTN.click(function () {
  * form
  */
 
-$(".close-form-link, .cancel-form-btn").click(function(){
+$(".close-form-link, .cancel-form-btn, .dark-layer").click(function(){
     $(".add_member_form").hide();
 });

@@ -3787,5 +3787,8 @@ ul.notifications {
 
 .add_member_form .x_panel {
     z-index: 999;
-    position: relative;
+    position: fixed;
+    width: 80%;
+    top:5rem;
+    left:10%;
 }
