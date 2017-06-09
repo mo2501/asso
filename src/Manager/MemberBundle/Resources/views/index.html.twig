@@ -47,7 +47,6 @@
                         <td>
                             <span class="table-seemore glyphicon glyphicon-eye-open"></span>
                         </td>
-                        </td>
                     </tr>
                 </table>
             </div>
@@ -55,4 +54,9 @@
             <button id="export-btn" class="btn btn-primary">Export Data</button>
             <p id="export"></p>
         </div>
+
+        <div class="add_member_form" style="display: none">
+            {% include 'ManagerMemberBundle::add_member_form.html.twig' %}
+        </div>
+
 {% endblock %}

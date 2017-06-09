@@ -7,8 +7,10 @@ var $BTN = $('#export-btn');
 var $EXPORT = $('#export');
 
 $('.table-add').click(function () {
-    var $clone = $TABLE.find('tr.hide').clone(true).removeClass('hide table-line');
-    $TABLE.find('table').append($clone);
+    $(".add_member_form").show();
+
+    // var $clone = $TABLE.find('tr.hide').clone(true).removeClass('hide table-line');
+    // $TABLE.find('table').append($clone);
 });
 
 $('.table-remove').click(function () {
@@ -55,4 +57,12 @@ $BTN.click(function () {
 
     // Output the result
     $EXPORT.text(JSON.stringify(data));
+});
+
+/**
+ * form
+ */
+
+$(".close-form-link, .cancel-form-btn").click(function(){
+    $(".add_member_form").hide();
 });
