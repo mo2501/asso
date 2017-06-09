@@ -5,13 +5,14 @@ security:
   role_hierarchy:
     ROLE_ADMIN:       ROLE_USER
     ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
-
+    ROLE_DEV: ROLE_SUPER_ADMIN
   providers:
     in_memory:
       memory:
         users:
           user:  { password: userpass, roles: [ 'ROLE_USER' ] }
           admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
+          dev: { password: devpass, roles: [ 'ROLE_DEV' ] }
 
   firewalls:
     dev:
@@ -26,9 +27,10 @@ security:
             check_path: login_check_manager
         logout:
             path: logout_manager
-            target: login_manager
+            target: /
 
   access_control:
       - { path: ^/manager, roles: ROLE_ADMIN }
       - { path: ^/manager, roles: ROLE_USER }
       - { path: ^/cloud, roles: ROLE_ADMIN }
+      - { path: ^/_console, roles: ROLE_DEV }

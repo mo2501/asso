@@ -3792,3 +3792,12 @@ ul.notifications {
     top:5rem;
     left:10%;
 }
+
+.applications {
+    font-size: 2.5rem;
+    padding:2rem;
+}
+.applications a {
+    margin:2rem;
+    padding:0.7rem;
+}
