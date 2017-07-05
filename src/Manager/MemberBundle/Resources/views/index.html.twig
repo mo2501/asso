@@ -9,6 +9,7 @@
                         <th>Nom</th>
                         <th>Prénom</th>
                         <th>Fonction</th>
+                        <th>Grade</th>
                         <th>Email</th>
                         <th></th>
                         <th></th>
@@ -19,9 +20,10 @@
                             <td contenteditable="true">{{ member.lastname }}</td>
                             <td contenteditable="true">{{ member.firstname }}</td>
                             <td contenteditable="true">{{ member.function }}</td>
+                            <td contenteditable="true">{{ member.status }}</td>
                             <td contenteditable="true">{{ member.email }}</td>
-                            <td>
-                                <span class="table-remove glyphicon glyphicon-remove"></span>
+                            <td id="{{ member.id }}">
+                                <a href="{{ path('manager_member_remove', {'id' : member.id}) }}" class="table-remove glyphicon glyphicon-remove"></a>
                             </td>
                             <td>
                                 <span class="table-up glyphicon glyphicon-arrow-up"></span>

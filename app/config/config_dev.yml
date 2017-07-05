@@ -11,6 +11,11 @@ web_profiler:
     toolbar: true
     intercept_redirects: false
 
+#twig configuration
+twig:
+    form_themes:
+        - 'bootstrap_3_layout.html.twig'
+
 monolog:
     handlers:
         main:

@@ -3789,8 +3789,10 @@ ul.notifications {
     z-index: 999;
     position: fixed;
     width: 80%;
+    height: 70%;
     top:5rem;
     left:10%;
+    overflow: auto;
 }
 
 .applications {

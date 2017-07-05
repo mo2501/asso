@@ -31,6 +31,6 @@ security:
 
   access_control:
       - { path: ^/manager, roles: ROLE_ADMIN }
-      - { path: ^/manager, roles: ROLE_USER }
-      - { path: ^/cloud, roles: ROLE_ADMIN }
+      - { path: ^/manager, roles: ROLE_ADMIN }
+      - { path: ^/elfinder, roles: ROLE_ADMIN }
       - { path: ^/_console, roles: ROLE_DEV }

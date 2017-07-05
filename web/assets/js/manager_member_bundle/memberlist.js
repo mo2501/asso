@@ -8,9 +8,6 @@ var $EXPORT = $('#export');
 
 $('.table-add').click(function () {
     $(".add_member_form").show();
-
-    // var $clone = $TABLE.find('tr.hide').clone(true).removeClass('hide table-line');
-    // $TABLE.find('table').append($clone);
 });
 
 $('.table-remove').click(function () {
@@ -66,3 +63,4 @@ $BTN.click(function () {
 $(".close-form-link, .cancel-form-btn, .dark-layer").click(function(){
     $(".add_member_form").hide();
 });
+
