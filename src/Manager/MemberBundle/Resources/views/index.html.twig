@@ -30,7 +30,7 @@
                                 <span class="table-down glyphicon glyphicon-arrow-down"></span>
                             </td>
                             <td>
-                                <span class="table-seemore glyphicon glyphicon-eye-open"></span>
+                                <a class="table-seemore glyphicon glyphicon-eye-open"></a>
                             </td>
                         </tr>
                     {% endfor %}
@@ -60,5 +60,11 @@
         <div class="add_member_form" style="display: none">
             {% include 'ManagerMemberBundle::add_member_form.html.twig' %}
         </div>
+
+
+        <div class="edit_member_form" style="display: none">
+            {% include 'ManagerMemberBundle::edit_member_form.html.twig' %}
+        </div>
+
 
 {% endblock %}

@@ -3803,3 +3803,7 @@ ul.notifications {
     margin:2rem;
     padding:0.7rem;
 }
+
+.table-seemore {
+    cursor: pointer;
+}

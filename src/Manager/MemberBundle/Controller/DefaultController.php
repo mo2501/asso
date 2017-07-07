@@ -71,6 +71,50 @@ class DefaultController extends Controller
 
     }
 
+    public function editMemberAction(Request $request, Member $member)
+    {
+        // init form add member
+        $formBuilder = $this->get('form.factory')->createBuilder(FormType::class, $member);
+        $formBuilder
+            ->add('firstname', TextType::class, array('data' => $member->getFirstname()))
+            ->add('lastname', TextType::class, array('data' => $member->getLastname()))
+            ->add('status', TextType::class, array('data' => $member->getStatus()))
+            ->add('function', TextType::class, array('data' => $member->getFunction()))
+            ->add('mission', TextType::class, array('data' => $member->getMission()))
+            ->add('birthday', DateType::class, array(
+                'years' => range(date("Y") - 100, date("Y")),
+            ))
+            ->add('startDate', DateType::class, array(
+                'years' => range(date("Y") - 80, date("Y")),
+            ))
+            ->add('email', TextType::class, array('data' => $member->getEmail()))
+            ->add('adress', TextType::class, array('data' => $member->getAdress()))
+            ->add('mobilePhone', TextType::class, array('data' => $member->getMobilePhone()))
+            ->add('homePhone', TextType::class, array('data' => $member->getHomePhone()))
+            ->add('proPhone', TextType::class, array('data' => $member->getProPhone()))
+            ->add('Ajouter', SubmitType::class);
+        $form = $formBuilder->getForm();
+        // end init form add member
+        // post form add member
+        if ($request->isMethod('POST')) {
+            $form->handleRequest($request);
+            if ($form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($member);
+                $em->flush();
+                return $this->redirectToRoute('manager_member_homepage', array('member_id' => $member->getId()));
+            }
+        }
+        // end post form add member
+
+        return $this->render(
+        'ManagerMemberBundle::index.html.twig',
+            array(
+                'edit_member_form' => $form->createView(),
+            )
+        );
+    }
+
     public function removeMemberAction (Member $member)
     {
 

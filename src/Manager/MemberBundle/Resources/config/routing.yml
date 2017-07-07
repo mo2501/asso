@@ -5,3 +5,7 @@ manager_member_homepage:
 manager_member_remove:
     path: /remove/{id}
     defaults: { _controller: ManagerMemberBundle:Default:removeMember }
+
+manager_member_edit:
+    path: /edit/{id}
+    defaults: { _controller: ManagerMemberBundle:Default:editMember }
